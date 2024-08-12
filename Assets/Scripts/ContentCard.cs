@@ -48,7 +48,6 @@ public class ContentCard : MonoBehaviour
         mapController.ActivateCheckPoint(cardSetScriptableObject.indexCheckPoint);
     }
 
-    // Проверка, требуется ли предмет
     public void CheckRequestItem(CardType cardType)
     {
         CardData cardData = null;
@@ -57,9 +56,9 @@ public class ContentCard : MonoBehaviour
         else if (cardType == CardType.Right) cardData = CardSetScriptableObject.rightCard;
 
         reverseSprite.enabled = true;
-        _changeBanner = cardData.changeBanner;
+        _changeBanner = cardData.changeBanner; // Проверка на смену баннера
 
-        if (cardData.locationSprite != null) _location = cardData.locationSprite;
+        if (cardData.locationSprite != null) _location = cardData.locationSprite; // Проверка на смену локации
         else _location = null;
 
         if (cardData.requiredItemSprite) // Проверка, требуется ли предмет
@@ -69,16 +68,13 @@ public class ContentCard : MonoBehaviour
                 NextCardSetScriptableObject = cardData.nextSetIfItem;
                 _changeLifeCount = cardData.changeLifePointsIfItem;
                 _haveItem = cardData.requiredItemSprite;
-                // Проверка, нужно удалить предмет из инветоаря
-                RemoveItem = cardData.removeItemSprite;
-
-                Debug.Log("Есть предмет");
+                
+                RemoveItem = cardData.removeItemSprite; // Проверка, нужно удалить предмет из инветоаря
             }
-            else                                             // Нет предмет в инвентаре
+            else                                       // Нет предмета
             {
                 NextCardSetScriptableObject = cardData.nextSetIfNoItem;
                 _changeLifeCount = cardData.changeLifePointsIfNoItem;
-                Debug.Log("Нет предмета");
             }
 
             reverseSprite.sprite = cardData.requiredItemSprite;
@@ -108,7 +104,8 @@ public class ContentCard : MonoBehaviour
     {
         if (_giveItem)
         {
-            await inventoryAnimation.MoveItemToInventory(_giveItem, reverseSprite.transform, inventoryController.GetTarget());
+            await inventoryAnimation
+                .MoveItemToInventory(_giveItem, reverseSprite.transform, inventoryController.GetTarget());
             await UniTask.Yield();
         }
     }
