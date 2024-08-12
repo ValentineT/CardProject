@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8636afbb060c9543bb985dfc1b704ad, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 21300000, guid: beec5eaaaed35644089dff36ce55fdf5, type: 3}
+  bannerText: "\u0422\u0435\u043A\u0441\u0442 \u043D\u0430 \u0431\u0430\u043D\u043D\u0435\u0440\u0435
+    \u041F\u0435\u0440\u0432\u0430\u044F \u0441\u0446\u0435\u043D\u0430 \u0442\u0438\u043F\u0430"
+  indexCheckPoint: 0
+  leftCard:
+    messageText: L S 1
+    illustrationSprite: {fileID: 21300000, guid: 93b0a74acba7f6d4ea1fe6ca881bf610, type: 3}
+    itemSprite: {fileID: 0}
+    requiredItemSprite: {fileID: 0}
+    removeItemSprite: 0
+    changeBanner: 1
+    locationSprite: {fileID: 0}
+    nextSetIfItem: {fileID: 11400000, guid: f6ea6492857e55e4f995ea63d0a8ae4e, type: 2}
+    nextSetIfNoItem: {fileID: 0}
+    reverseSpriteIfItem: {fileID: 21300000, guid: 09b59836e54d4654ab1c14828dc19ee5, type: 3}
+    reverseTopTextIfItem: "\u0412\u0435\u0440\u0445\u043D\u0438\u0439 \u0442\u0435\u043A\u0441\u0442
+      \u0440\u0435\u0432\u0435\u0440\u0441\u0430 \u043B\u0435\u0432\u043E\u0439 \u043A\u0430\u0440\u0442\u044B
+      \u0441\u0435\u0442 1"
+    reverseBottomTextIfItem: "\u041D\u0438\u0436\u043D\u0438\u0439 \u0442\u0435\u043A\u0441\u0442
+      \u0440\u0435\u0432\u0435\u0440\u0441\u0430 \u043B\u0435\u0432\u043E\u0439 \u043A\u0430\u0440\u0442\u044B
+      \u0441\u0435\u0442 1"
+    changeLifePointsIfItem: 0
+    reverseSpriteIfNoItem: {fileID: 0}
+    reverseTopTextIfNoItem: 
+    reverseBottomTextIfNoItem: 
+    changeLifePointsIfNoItem: 0
+  rightCard:
+    messageText: R S 1
+    illustrationSprite: {fileID: 21300000, guid: b426f7032e9f23048bb6fde4aeee1f7a, type: 3}
+    itemSprite: {fileID: 0}
+    requiredItemSprite: {fileID: 0}
+    removeItemSprite: 0
+    changeBanner: 1
+    locationSprite: {fileID: 0}
+    nextSetIfItem: {fileID: 11400000, guid: efdddba89992b1b4880a2a2220169f83, type: 2}
+    nextSetIfNoItem: {fileID: 0}
+    reverseSpriteIfItem: {fileID: 21300000, guid: 55ce038ddc84b254e886e7a735541e2a, type: 3}
+    reverseTopTextIfItem: "\u0412\u0435\u0440\u0445\u043D\u0438\u0439 \u0442\u0435\u0441\u0442
+      \u0440\u0435\u0432\u0435\u0440\u0441\u0430 \u043F\u0440\u0430\u0432\u043E\u0439
+      \u043A\u0430\u0440\u0442\u044B S1"
+    reverseBottomTextIfItem: "\u041D\u0438\u0436\u043D\u0438\u0439 \u0442\u0435\u043A\u0441\u0442
+      \u0440\u0435\u0432\u0435\u0440\u0441\u0430 \u043F\u0440\u0430\u0432\u043E\u0439
+      \u043A\u0430\u0440\u0442\u044B S 1"
+    changeLifePointsIfItem: 0
+    reverseSpriteIfNoItem: {fileID: 0}
+    reverseTopTextIfNoItem: 
+    reverseBottomTextIfNoItem: 
+    changeLifePointsIfNoItem: 0
