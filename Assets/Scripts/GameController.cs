@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour
     {
         await ShowHold();
         mapPanel.position = _positionUp;
+        mainMenuPanel.position = _positionUp;
         await HideHold();
         await UniTask.Yield();
     }
