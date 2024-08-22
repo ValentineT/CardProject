@@ -6,6 +6,7 @@ public class CardData
     // Основная информация для карты
     [TextArea(3, 3)] public string messageText; // Текст сообщения
     public Sprite illustrationSprite; // Иллюстрация для карты
+    public AnimationClip animationClip; // Анимация для карты
 
     // Информация о предметах
     public Sprite itemSprite; // Спрайт предмета, если карта дает предмет

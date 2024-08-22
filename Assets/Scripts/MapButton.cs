@@ -31,7 +31,7 @@ public class MapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public async void OnPointerDown(PointerEventData eventData)
     {
-        _transform.DOScale(Vector3.one, 0.3f);
+        _transform.DOScale(Vector3.one, 0.2f);
         contentCard.SetContent(cardSetScriptableObject);
         cardAnimation.HideCard();
         await bannerAnimation.HideBanner();

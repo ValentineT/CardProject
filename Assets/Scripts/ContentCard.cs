@@ -8,6 +8,7 @@ public class ContentCard : MonoBehaviour
     [SerializeField] private Image portraitSprite, illustrationSprite_L, illustrationSprite_R, reverseSprite, locationSprite;
     [SerializeField] private TMP_Text bannerText, reverseTopText, reverseDownText, cartText_L, cardText_R;
     [SerializeField] private InventoryController inventoryController;
+    [SerializeField] private InputCard input_L, input_R;
     [SerializeField] private MapController mapController;
     [SerializeField] private InventoryAnimation inventoryAnimation;
     [SerializeField] private HPController hpController;
@@ -16,6 +17,7 @@ public class ContentCard : MonoBehaviour
 
     private CardSetScriptableObject _cardSetScriptableObject, _nextCardSetScriptableObject;
     private Sprite _giveItem, _haveItem, _location;
+
     private int _changeLifeCount = 0;
     private bool _changeBanner;
     private bool _removeItem;
@@ -41,7 +43,8 @@ public class ContentCard : MonoBehaviour
         portraitSprite.sprite = cardSetScriptableObject?.portrait;
         illustrationSprite_L.sprite = cardSetScriptableObject?.leftCard.illustrationSprite;
         illustrationSprite_R.sprite = cardSetScriptableObject?.rightCard.illustrationSprite;
-
+        input_L.AnimationClip = cardSetScriptableObject?.leftCard.animationClip;
+        input_R.AnimationClip = cardSetScriptableObject?.rightCard?.animationClip;
         bannerText.text = cardSetScriptableObject?.bannerText;
         cartText_L.text = cardSetScriptableObject?.leftCard.messageText;
         cardText_R.text = cardSetScriptableObject?.rightCard.messageText;

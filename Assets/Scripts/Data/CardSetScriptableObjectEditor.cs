@@ -47,6 +47,7 @@ public class CardSetScriptableObjectEditor : Editor
         // Основные поля
         EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.messageText"), new GUIContent("Текст сообщения"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.illustrationSprite"), new GUIContent("Иллюстрация"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.animationClip"), new GUIContent("Анимация"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.itemSprite"), new GUIContent("Спрайт предмета награды"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.requiredItemSprite"), new GUIContent("Спрайт требуемого предмета"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty($"{cardPropertyPath}.removeItemSprite"), new GUIContent("Удалить спрайт при использовании"));

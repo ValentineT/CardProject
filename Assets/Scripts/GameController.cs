@@ -85,4 +85,6 @@ public class GameController : MonoBehaviour
         bg.sprite = sprite;
         await HideHold();
     }
+
+    public void HideMapButton() => HideMap().Forget();
 }

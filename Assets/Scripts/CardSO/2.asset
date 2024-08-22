@@ -18,7 +18,8 @@ MonoBehaviour:
   indexCheckPoint: 1
   leftCard:
     messageText: L S 2
-    illustrationSprite: {fileID: 21300000, guid: 8b70d2903aa5b3046a5d5e8b05084fb7, type: 3}
+    illustrationSprite: {fileID: 21300000, guid: d853b08cdf2362b49a15fa46268c49c0, type: 3}
+    animationClip: {fileID: 0}
     itemSprite: {fileID: 21300000, guid: 55ce038ddc84b254e886e7a735541e2a, type: 3}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
@@ -41,6 +42,7 @@ MonoBehaviour:
   rightCard:
     messageText: R S 2
     illustrationSprite: {fileID: 21300000, guid: bf869dbded9003b4db1b2813e44d034c, type: 3}
+    animationClip: {fileID: 0}
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
