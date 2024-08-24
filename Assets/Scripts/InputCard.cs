@@ -50,9 +50,10 @@ public class InputCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private async void ClickCard()
     {
+        if (_animator) _animator.enabled = false;
+
         if (cardType != CardType.Reverse)
         {
-            if(_animator)_animator.enabled = false;
             contentCard.CheckRequestItem(cardType);
             cardAnimation.FlipCard(cardType);
         }
