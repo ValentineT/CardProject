@@ -61,8 +61,8 @@ public class CardAnimation : MonoBehaviour
     {
         Transform currentCard = null;
         Transform holdCard = null;
-
-        rightCard.localScale = Vector3.one;
+        
+       // rightCard.localScale = Vector3.one;
 
         switch (cardType)
         {
@@ -86,6 +86,7 @@ public class CardAnimation : MonoBehaviour
             {
                 currentCard.DOScaleX(0.001f, 0.4f).OnComplete(() =>
                 {
+                    reverseCard.localScale = Vector3.one;
                     reverseCard.position = currentCard.position;
                     reverseCard.DOScaleX(0.001f, 0.4f).From().OnComplete(() =>
                     {

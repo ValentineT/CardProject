@@ -19,6 +19,7 @@ MonoBehaviour:
   leftCard:
     messageText: L S 3
     illustrationSprite: {fileID: 21300000, guid: ebbd9a0346f129243a57b25d8e3ff780, type: 3}
+    animationClip: {fileID: 0}
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
@@ -41,11 +42,12 @@ MonoBehaviour:
   rightCard:
     messageText: R S 3
     illustrationSprite: {fileID: 21300000, guid: f95e2869e8fdd8446a38da1104fd299b, type: 3}
+    animationClip: {fileID: 0}
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
     changeBanner: 1
-    locationSprite: {fileID: 0}
+    locationSprite: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
     nextSetIfItem: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
     nextSetIfNoItem: {fileID: 0}
     reverseSpriteIfItem: {fileID: 21300000, guid: e989c15fa51e71340a9881f9dc46c0c2, type: 3}

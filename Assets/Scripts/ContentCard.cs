@@ -14,6 +14,7 @@ public class ContentCard : MonoBehaviour
     [SerializeField] private HPController hpController;
     [SerializeField] private BannerAnimation bannerAnimation;
     [SerializeField] private GameController gameController;
+    [SerializeField] private Animator animL, animR;
 
     private CardSetScriptableObject _cardSetScriptableObject, _nextCardSetScriptableObject;
     private Sprite _giveItem, _haveItem, _location;
@@ -41,10 +42,13 @@ public class ContentCard : MonoBehaviour
         CardSetScriptableObject = cardSetScriptableObject;
 
         portraitSprite.sprite = cardSetScriptableObject?.portrait;
-        illustrationSprite_L.sprite = cardSetScriptableObject?.leftCard.illustrationSprite;
-        illustrationSprite_R.sprite = cardSetScriptableObject?.rightCard.illustrationSprite;
-        input_L.AnimationClip = cardSetScriptableObject?.leftCard.animationClip;
+
+        input_L.AnimationClip = cardSetScriptableObject?.leftCard?.animationClip;
+        illustrationSprite_L.sprite = cardSetScriptableObject.leftCard.illustrationSprite;
+
         input_R.AnimationClip = cardSetScriptableObject?.rightCard?.animationClip;
+        illustrationSprite_R.sprite = cardSetScriptableObject.rightCard.illustrationSprite;
+
         bannerText.text = cardSetScriptableObject?.bannerText;
         cartText_L.text = cardSetScriptableObject?.leftCard.messageText;
         cardText_R.text = cardSetScriptableObject?.rightCard.messageText;
@@ -54,6 +58,7 @@ public class ContentCard : MonoBehaviour
     public void CheckRequestItem(CardType cardType)
     {
         CardData cardData = null;
+        StopAnim();
 
         if (cardType == CardType.Left) cardData = CardSetScriptableObject.leftCard;
         else if (cardType == CardType.Right) cardData = CardSetScriptableObject.rightCard;
@@ -71,7 +76,7 @@ public class ContentCard : MonoBehaviour
                 NextCardSetScriptableObject = cardData.nextSetIfItem;
                 _changeLifeCount = cardData.changeLifePointsIfItem;
                 _haveItem = cardData.requiredItemSprite;
-                
+
                 RemoveItem = cardData.removeItemSprite; // Проверка, нужно удалить предмет из инветоаря
             }
             else                                       // Нет предмета
@@ -138,14 +143,20 @@ public class ContentCard : MonoBehaviour
     {
         inventoryController.RemoveItem(_haveItem);
         await inventoryAnimation.RemoveItemFromInventory(_haveItem);
-        await UniTask.Yield(); 
+        await UniTask.Yield();
     }
 
     public async UniTask ChangeLocationSprite()
     {
-        if (_location == null) return; 
+        if (_location == null) return;
         await gameController.ChangeBG(_location);
         await UniTask.Yield();
+    }
+
+    private void StopAnim()
+    {
+        animL.enabled = false;
+        animR.enabled = false;
     }
 }
 
