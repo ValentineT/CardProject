@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8636afbb060c9543bb985dfc1b704ad, type: 3}
-  m_Name: 2_Left
+  m_Name: 2_Guard
   m_EditorClassIdentifier: 
   portrait: {fileID: 21300000, guid: cbb1c106c552a574197ef4c0810f3953, type: 3}
   bannerText: "\u0417\u0430 \u0434\u0432\u0435\u0440\u044C\u044E \u043E\u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C
@@ -26,8 +26,8 @@ MonoBehaviour:
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
-    changeBanner: 1
-    locationSprite: {fileID: 0}
+    changeBanner: 0
+    locationSprite: {fileID: 21300000, guid: c2f383188c69f8f48994bb6152dda50b, type: 3}
     nextSetIfItem: {fileID: 11400000, guid: 5b8bb2d823ac7f64cadeed6172e26eb4, type: 2}
     nextSetIfNoItem: {fileID: 0}
     reverseSpriteIfItem: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
     removeItemSprite: 0
-    changeBanner: 1
-    locationSprite: {fileID: 0}
+    changeBanner: 0
+    locationSprite: {fileID: 21300000, guid: c2f383188c69f8f48994bb6152dda50b, type: 3}
     nextSetIfItem: {fileID: 11400000, guid: 284df8acc7e0b73439f30e8df01bcde5, type: 2}
     nextSetIfNoItem: {fileID: 0}
     reverseSpriteIfItem: {fileID: 21300000, guid: fede03e2466eab2458062dcab5f9a258, type: 3}
