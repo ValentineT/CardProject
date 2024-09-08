@@ -93,4 +93,42 @@ public class InventoryController : MonoBehaviour
             Debug.LogWarning("Предмет не найден в инвентаре.");
         }
     }
+
+    // Получить список предметов для сохранения
+    public List<Sprite> GetInventorySprites()
+    {
+        List<Sprite> sprites = new List<Sprite>();
+
+        foreach (Image image in inventory)
+        {
+            if (image.enabled && image.sprite != null)
+            {
+                sprites.Add(image.sprite);
+            }
+        }
+
+        return sprites;
+    }
+
+    // Загрузить предметы в инвентарь
+    public void LoadInventorySprites(List<Sprite> sprites)
+    {
+        // Сбрасываем инвентарь
+        foreach (Image image in inventory)
+        {
+            image.enabled = false;
+            image.sprite = null;
+        }
+
+        // Загружаем сохранённые спрайты
+        for (int i = 0; i < sprites.Count; i++)
+        {
+            if (i < inventory.Count)
+            {
+                inventory[i].sprite = sprites[i];
+                inventory[i].enabled = true;
+            }
+        }
+    }
+
 }

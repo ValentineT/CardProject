@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private Transform holdPanel, mapPanel, mainMenuPanel;
+    [SerializeField] private Transform holdPanel, mapPanel, mainMenuPanel, winPanel, deadPanel, pausePanel, savePanel, loadPanel;
     [SerializeField] private Image bg;
+    [SerializeField] private HPController hPController;
     [SerializeField] private float duration, posUp;
 
     private Image _imageHold;
     private Color _normalColorHold;
     private Vector3 _positionUp;
+    private bool _isGameOver = false;
+
+    public bool IsGameOver { get => _isGameOver; set => _isGameOver = value; }
 
     private void Start()
     {
@@ -76,6 +80,39 @@ public class GameController : MonoBehaviour
         mainMenuPanel.position = _positionUp;
         await HideHold();
         await UniTask.Yield();
+    }
+
+    public async UniTask ShowDead()
+    {
+        _isGameOver = true;
+        await ShowHold();
+        deadPanel.position = Vector3.zero;
+        await HideHold();
+    }
+
+    public async UniTask HideDead()
+    {
+        _isGameOver = false;
+        await ShowHold();
+        deadPanel.position = _positionUp;
+        await HideHold();
+        await UniTask.Yield();
+    }
+
+    public async void GoToMenu()
+    {
+        await ShowHold();
+        deadPanel.position = _positionUp;
+        mainMenuPanel.position = Vector3.zero;
+        await HideHold();
+    }
+
+    public async void GoToMap()
+    {
+        await ShowHold();
+        deadPanel.position = _positionUp;
+        mapPanel.position = Vector3.zero;
+        await HideHold();
     }
 
     public async UniTask ChangeBG(Sprite sprite)

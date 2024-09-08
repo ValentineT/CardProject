@@ -38,30 +38,22 @@ public class HPController : MonoBehaviour
                 hPAnimation.AddLife(hpImages[i]);
             }
         }
-
-        CheckCountHP();
     }
 
-    private void CheckCountHP()
+    public int GetCurrentHP()
     {
-        bool allDisabled = true;
+        int currentHp = 0;
+
+        // Подсчитываем количество включенных сердечек
         foreach (var image in hpImages)
         {
             if (image.enabled)
             {
-                allDisabled = false;
-                break;
+                currentHp++;
             }
         }
 
-        if (allDisabled)
-        {
-            GameOver();
-        }
+        return currentHp;
     }
 
-    private void GameOver()
-    {
-        Debug.Log("Game over");
-    }
 }

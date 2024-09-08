@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +6,7 @@ using UnityEngine.UI;
 public class HPAnimation : MonoBehaviour
 {
     [SerializeField] private float duration;
+    [SerializeField] private GameController gameController;
 
     private Color _normalColor;
 
@@ -19,9 +21,9 @@ public class HPAnimation : MonoBehaviour
 
     }
 
-    public void RemoveLife(Image image) 
+    public async void RemoveLife(Image image) 
     {
-        Debug.Log($"Анимация удаления {image.name}");
+        if (image.name == "heart (0)") await gameController.ShowDead();
 
         Transform transform = image.GetComponent<Transform>();
         _normalColor = image.color;
