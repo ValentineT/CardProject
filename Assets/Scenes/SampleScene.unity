@@ -3912,7 +3912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c13818bc29717b48a55da2038ade8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hPController: {fileID: 0}
   checkPoints:
   - {fileID: 1604254695}
   - {fileID: 243733323}
@@ -4376,8 +4375,8 @@ GameObject:
   - component: {fileID: 607226154}
   - component: {fileID: 607226158}
   - component: {fileID: 607226157}
-  - component: {fileID: 607226156}
   - component: {fileID: 607226155}
+  - component: {fileID: 607226159}
   m_Layer: 5
   m_Name: ReStartButton
   m_TagString: Untagged
@@ -4420,26 +4419,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
---- !u!114 &607226156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607226153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c37e874954f700459c8bca3c305a230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentCard: {fileID: 991657348}
-  bG: {fileID: 1190085053}
-  loadBg: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
-  cardAnimation: {fileID: 991657347}
-  bannerAnimation: {fileID: 1356118122}
-  gameController: {fileID: 1825275744}
-  hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
 --- !u!114 &607226157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4478,6 +4457,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607226153}
   m_CullTransparentMesh: 1
+--- !u!114 &607226159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607226153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccaecebf1c683a34b8b46e033fc2b07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentCard: {fileID: 991657348}
+  bG: {fileID: 1190085053}
+  loadBg: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
+  cardAnimation: {fileID: 991657347}
+  bannerAnimation: {fileID: 1356118122}
+  gameController: {fileID: 1825275744}
+  hpController: {fileID: 1650742178}
+  cardSetScriptableObject: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
 --- !u!1 &607471567
 GameObject:
   m_ObjectHideFlags: 0
