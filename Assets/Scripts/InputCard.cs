@@ -7,6 +7,7 @@ public class InputCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     [SerializeField] private CardAnimation cardAnimation;
     [SerializeField] private ContentCard contentCard;
+    [SerializeField] private GameController gameController;
     [SerializeField] private CardType cardType;
     [SerializeField] private Animator _animator;
 
@@ -48,7 +49,7 @@ public class InputCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         ClickCard();
     }
 
-    private async void ClickCard()
+    private void ClickCard()
     {
         if (_animator) _animator.enabled = false;
 
@@ -59,18 +60,25 @@ public class InputCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
         else
         {
-            contentCard.ChangeCountHP();
-
-            if (contentCard.RemoveItem) await contentCard.RemoveItemFromInventory();
-            
-            await contentCard.SetItemToInventory();
-            await cardAnimation.HoldReverseCard();
-            await contentCard.HoldBanner();
-            await contentCard.ChangeLocationSprite();
-            contentCard.SetContent(contentCard.NextCardSetScriptableObject);
-            await UniTask.Delay(600);
-            await contentCard.ShowBanner();
-            await cardAnimation.ShowCards();
+            ClickReverse();
         }
+    }
+
+    // Клик по реверсу карты с последующим воспроизведением сценария
+    private async void ClickReverse()
+    {
+        contentCard.ChangeCountHP();
+
+        if (contentCard.RemoveItem) await contentCard.RemoveItemFromInventory();
+
+        await contentCard.SetItemToInventory();
+        await cardAnimation.HoldReverseCard();
+        await contentCard.HoldBanner();
+        await contentCard.ChangeLocationSprite();
+        contentCard.SetContent(contentCard.NextCardSetScriptableObject);
+        if (gameController.IsGameOver) return;
+        await UniTask.Delay(600);
+        await contentCard.ShowBanner();
+        await cardAnimation.ShowCards();
     }
 }

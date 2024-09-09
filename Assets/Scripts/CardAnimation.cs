@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardAnimation : MonoBehaviour
 {
     [SerializeField] private Transform leftCard, rightCard, reverseCard;
+    [SerializeField] private GameController gameController;
     [SerializeField] private float duration;
 
     private Vector3 _normalPosLeft, _normalPosRight, _normalPosReverse;
@@ -36,6 +37,7 @@ public class CardAnimation : MonoBehaviour
     public async UniTask ShowCards()
     {
         var taskCompletionSource = new UniTaskCompletionSource();
+
         InputCardActivate(false);
 
         leftCard.DOMove(_normalPosLeft, duration, false).SetEase(Ease.OutBack);

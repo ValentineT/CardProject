@@ -1,13 +1,17 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     [SerializeField] private ContentCard contentCard;
+    [SerializeField] private Image bG;
+    [SerializeField] private Sprite loadBg;
     [SerializeField] private CardAnimation cardAnimation;
     [SerializeField] private BannerAnimation bannerAnimation;
     [SerializeField] private GameController gameController;
+    [SerializeField] private HPController hpController;
 
     [Space]
     [SerializeField] private CardSetScriptableObject cardSetScriptableObject;
@@ -34,6 +38,7 @@ public class MapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         _transform.DOScale(Vector3.one, 0.2f);
         contentCard.SetContent(cardSetScriptableObject);
         cardAnimation.HideCard();
+        bG.sprite = loadBg;
         await bannerAnimation.HideBanner();
         await gameController.HideMap();
         await bannerAnimation.ShowBanner();

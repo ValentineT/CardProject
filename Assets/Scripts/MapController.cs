@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    [SerializeField] private HPController hPController;
     [SerializeField] private List<GameObject> checkPoints;
 
     public void ActivateCheckPoint(int index)
