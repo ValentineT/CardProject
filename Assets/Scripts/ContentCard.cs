@@ -52,7 +52,8 @@ public class ContentCard : MonoBehaviour
         bannerText.text = cardSetScriptableObject?.bannerText;
         cartText_L.text = cardSetScriptableObject?.leftCard.messageText;
         cardText_R.text = cardSetScriptableObject?.rightCard.messageText;
-        mapController.ActivateCheckPoint(cardSetScriptableObject.indexCheckPoint);
+
+        if (cardSetScriptableObject.checkPoint) mapController.ActivateCheckPoint();
     }
 
     public void CheckRequestItem(CardType cardType)

@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -42,7 +40,7 @@ public class RestartButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         cardAnimation.HideCard();
         bG.sprite = loadBg;
         await bannerAnimation.HideBanner();
-        hpController.ChangeCountHP(3);
+       // hpController.ChangeCountHP(3);
         await gameController.HideDead();
         await bannerAnimation.ShowBanner();
         await cardAnimation.ShowCards();
