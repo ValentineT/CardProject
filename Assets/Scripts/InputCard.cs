@@ -70,13 +70,18 @@ public class InputCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         contentCard.ChangeCountHP();
 
         if (contentCard.RemoveItem) await contentCard.RemoveItemFromInventory();
+        if (gameController.IsGameOver)
+        {
+            gameController.IsGameOver = false;
+            return;
+        }
 
         await contentCard.SetItemToInventory();
         await cardAnimation.HoldReverseCard();
         await contentCard.HoldBanner();
         await contentCard.ChangeLocationSprite();
         contentCard.SetContent(contentCard.NextCardSetScriptableObject);
-        if (gameController.IsGameOver) return;
+        
         await UniTask.Delay(600);
         await contentCard.ShowBanner();
         await cardAnimation.ShowCards();
