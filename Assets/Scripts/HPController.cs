@@ -40,6 +40,31 @@ public class HPController : MonoBehaviour
         }
     }
 
+    // Метод для установки точного количества жизней
+    public void SetHP(int targetHp)
+    {
+        targetHp = Mathf.Clamp(targetHp, 0, hpImages.Count); // Ограничиваем диапазон
+
+        int currentHp = GetCurrentHP(); // Получаем текущее количество жизней
+
+        if (targetHp < currentHp)
+        {
+            // Выключаем сердечки с конца списка
+            for (int i = currentHp - 1; i >= targetHp; i--)
+            {
+                hPAnimation.RemoveLife(hpImages[i]);
+            }
+        }
+        else if (targetHp > currentHp)
+        {
+            // Включаем сердечки с начала списка
+            for (int i = currentHp; i < targetHp; i++)
+            {
+                hPAnimation.AddLife(hpImages[i]);
+            }
+        }
+    }
+
     public int GetCurrentHP()
     {
         int currentHp = 0;
@@ -55,5 +80,4 @@ public class HPController : MonoBehaviour
 
         return currentHp;
     }
-
 }

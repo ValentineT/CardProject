@@ -3,29 +3,24 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     [SerializeField] private ContentCard contentCard;
     [SerializeField] private Image bG;
+    [SerializeField] private Sprite loadBg;
     [SerializeField] private CardAnimation cardAnimation;
     [SerializeField] private BannerAnimation bannerAnimation;
     [SerializeField] private GameController gameController;
     [SerializeField] private HPController hpController;
-    [SerializeField] private InventoryController inventoryController;
-    [SerializeField] private MapController mapController;
 
-    private CheckPoint _checkPoint;
+    [Space]
+    [SerializeField] private CardSetScriptableObject cardSetScriptableObject;
+
     private Transform _transform;
 
     private void Start()
     {
         _transform = transform;
-        _checkPoint = GetComponent<CheckPoint>();
-        _checkPoint.Location = bG.sprite;
-        _checkPoint.HpCount = hpController.GetCurrentHP();
-        _checkPoint.CardSetScriptableObject = contentCard.CardSetScriptableObject;
-        _checkPoint.Items.Clear();
-        _checkPoint.Items = inventoryController.GetInventorySprites();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -41,14 +36,12 @@ public class MapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public async void OnPointerDown(PointerEventData eventData)
     {
         _transform.DOScale(Vector3.one, 0.2f);
-        contentCard.SetContent(_checkPoint.CardSetScriptableObject);
+        contentCard.SetContent(cardSetScriptableObject);
         cardAnimation.HideCard();
-        bG.sprite = _checkPoint.Location;
-        hpController.SetHP(_checkPoint.HpCount);
-        inventoryController.LoadInventorySprites(_checkPoint.Items);
-        mapController.DeactivateCheckPoint(_checkPoint.Index +1);
+        bG.sprite = loadBg;
         await bannerAnimation.HideBanner();
-        await gameController.HideMap();
+        // hpController.ChangeCountHP(3);
+         gameController.HideMenu();
         await bannerAnimation.ShowBanner();
         await cardAnimation.ShowCards();
     }

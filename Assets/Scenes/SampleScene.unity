@@ -174,13 +174,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &14467159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,12 +228,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 14467156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &20461191
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,13 +604,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &108473009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,12 +658,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 108473006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &129690229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,13 +1697,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 11400000, guid: 095cb6d50afb6db43a4b352de6557d5e, type: 2}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &243733326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,12 +1751,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 243733323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &244533464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,13 +2437,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &366537131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,12 +2491,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 366537128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &368199500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1107}
+  m_AnchoredPosition: {x: 0, y: 1127}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388506917
@@ -5329,8 +5317,8 @@ GameObject:
   - component: {fileID: 672165343}
   - component: {fileID: 672165347}
   - component: {fileID: 672165346}
-  - component: {fileID: 672165345}
   - component: {fileID: 672165344}
+  - component: {fileID: 672165348}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -5373,26 +5361,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
---- !u!114 &672165345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672165342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c37e874954f700459c8bca3c305a230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentCard: {fileID: 991657348}
-  bG: {fileID: 1190085053}
-  loadBg: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
-  cardAnimation: {fileID: 991657347}
-  bannerAnimation: {fileID: 1356118122}
-  gameController: {fileID: 1825275744}
-  hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
 --- !u!114 &672165346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5431,6 +5399,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672165342}
   m_CullTransparentMesh: 1
+--- !u!114 &672165348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672165342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c281c80ea559d304aa8cb4b40e039f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentCard: {fileID: 991657348}
+  bG: {fileID: 1190085053}
+  loadBg: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
+  cardAnimation: {fileID: 991657347}
+  bannerAnimation: {fileID: 1356118122}
+  gameController: {fileID: 1825275744}
+  hpController: {fileID: 1650742178}
+  cardSetScriptableObject: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
 --- !u!1 &697563969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,13 +5636,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &722976994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5702,12 +5690,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 722976991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &732029384
 GameObject:
   m_ObjectHideFlags: 0
@@ -7741,13 +7726,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &1007603824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7795,12 +7780,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007603821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &1061269320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,13 +7835,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &1061269323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7907,12 +7889,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061269320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &1074325419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9658,7 +9637,7 @@ GameObject:
   - component: {fileID: 1311905924}
   - component: {fileID: 1311905928}
   m_Layer: 5
-  m_Name: CheckPoint
+  m_Name: GoToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11453,13 +11432,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &1574868029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11507,12 +11486,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1574868026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &1582228219
 GameObject:
   m_ObjectHideFlags: 0
@@ -11683,7 +11659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1604254696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11717,12 +11693,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
   bG: {fileID: 1190085053}
-  loadBg: {fileID: 21300000, guid: 530b8e1dcd8b7f244a22cc77b8bbc5d3, type: 3}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 11400000, guid: 3004fe589ac54114b81f693a1092670f, type: 2}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &1604254698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11770,12 +11746,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1604254695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &1619669784
 GameObject:
   m_ObjectHideFlags: 0
@@ -12636,13 +12609,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentCard: {fileID: 991657348}
-  bG: {fileID: 0}
-  loadBg: {fileID: 0}
+  bG: {fileID: 1190085053}
   cardAnimation: {fileID: 991657347}
   bannerAnimation: {fileID: 1356118122}
   gameController: {fileID: 1825275744}
   hpController: {fileID: 1650742178}
-  cardSetScriptableObject: {fileID: 0}
+  inventoryController: {fileID: 70427095}
+  mapController: {fileID: 539283691}
 --- !u!114 &1762749831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12690,12 +12663,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762749828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257c8ad4856d844a85cc653decebecb, type: 3}
+  m_Script: {fileID: 11500000, guid: eeda57852d562a9478d47004822266d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPCount: 0
-  Index: 0
-  Items: []
 --- !u!1 &1775102635
 GameObject:
   m_ObjectHideFlags: 0
@@ -12844,7 +12814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 84cc4d5893165b14cb5fe69fc2837865, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12950,7 +12920,7 @@ GameObject:
   - component: {fileID: 1810711180}
   - component: {fileID: 1810711179}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonToMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

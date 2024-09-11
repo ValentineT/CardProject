@@ -23,7 +23,7 @@ public class CardSetScriptableObjectEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("bannerText"), new GUIContent("Текст баннера"));
 
         EditorGUILayout.Space();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("indexCheckPoint"), new GUIContent("Индекс чекпоинта"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("checkPoint"), new GUIContent("Чекпоинт"));
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider); // Разделительная черта
         EditorGUILayout.Space();
 

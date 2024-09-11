@@ -5,7 +5,7 @@ public class CardSetScriptableObject : ScriptableObject
 {
     public Sprite portrait; // Портрет для сета
     [TextArea(3, 3)] public string bannerText; // Текст на баннере
-    public int indexCheckPoint; // Индекс активации чепоинта
+    public bool checkPoint; // Индекс активации чепоинта
 
     public CardData leftCard; // Левая карта
     public CardData rightCard; // Правая карта
