@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Transform holdPanel, mapPanel, mainMenuPanel, winPanel, deadPanel, pausePanel, savePanel, loadPanel;
     [SerializeField] private Image bg;
     [SerializeField] private HPController hPController;
+    [SerializeField] private SoundController soundController;
     [SerializeField] private float duration, posUp;
 
     private Image _imageHold;
@@ -54,30 +55,38 @@ public class GameController : MonoBehaviour
 
     public async void ShowMenu()
     {
+        soundController.PlayMenuMusic();
         await ShowHold();
+        
         mainMenuPanel.position = Vector3.zero;
         await HideHold();
     }
 
     public async void HideMenu()
     {
+        soundController.PlayGameMusic();
         await ShowHold();
+        
         mainMenuPanel.position = _positionUp;
         await HideHold();
     }
 
     public async void ShowMap()
     {
+        soundController.PlayMapMusic();
         await ShowHold();
         mapPanel.position = Vector3.zero;
+       
         await HideHold();
     }
 
     public async UniTask HideMap()
     {
+        soundController.PlayGameMusic();
         await ShowHold();
         mapPanel.position = _positionUp;
         mainMenuPanel.position = _positionUp;
+        
         await HideHold();
         await UniTask.Yield();
     }
