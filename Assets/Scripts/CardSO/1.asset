@@ -28,18 +28,18 @@ MonoBehaviour:
     nextSetIfItem: {fileID: 11400000, guid: 87799774be82da940b2525dce31554dd, type: 2}
     nextSetIfNoItem: {fileID: 0}
     reverseSpriteIfItem: {fileID: 0}
-    reverseTopTextIfItem: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u0434\u0432\u0435\u0440\u044C"
-    reverseBottomTextIfItem: "\u0412\u044B \u043D\u0435\u0445\u043E\u0442\u044F \u0432\u0441\u0442\u0430\u0435\u0442\u0435
+    reverseTopTextIfItem: "\u0412\u044B \u043D\u0435\u0445\u043E\u0442\u044F \u0432\u0441\u0442\u0430\u0435\u0442\u0435
       \u0441 \u043F\u0435\u0447\u0438 \u0438 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0442\u0435
       \u0434\u0432\u0435\u0440\u044C"
+    reverseBottomTextIfItem: 
     changeLifePointsIfItem: 0
     reverseSpriteIfNoItem: {fileID: 0}
     reverseTopTextIfNoItem: 
     reverseBottomTextIfNoItem: 
     changeLifePointsIfNoItem: 0
   rightCard:
-    messageText: "\u041E\u043A\u043D\u043E"
-    illustrationSprite: {fileID: 0}
+    messageText: "\u0412\u044B\u043B\u0435\u0437\u0442\u0438 \u0432 \u043E\u043A\u043D\u043E"
+    illustrationSprite: {fileID: 21300000, guid: 88488abe6828a4f4186b0a1537c1d2a5, type: 3}
     animationClip: {fileID: 0}
     itemSprite: {fileID: 0}
     requiredItemSprite: {fileID: 0}
